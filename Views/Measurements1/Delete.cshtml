@@ -1,0 +1,44 @@
+﻿@model Tailor_shop.ViewModel.MeasurementViewModel
+@{
+    Layout = "AdminLayout";
+}
+
+@{
+    ViewData["Title"] = "Delete Measurement";
+}
+
+<h1>Delete Measurement</h1>
+
+<h3>Are you sure you want to delete this measurement?</h3>
+<div>
+    <h4>Measurement Information</h4>
+    <div>
+        <strong>Measurement ID:</strong> @Model.MeasurementId
+    </div>
+    <div>
+        <strong>Customer:</strong> @Model.CustomerId
+    </div>
+    <div>
+        <strong>Product:</strong> @Model.ProductId
+    </div>
+    <div>
+        <strong>Neck:</strong> @Model.Neck
+    </div>
+    <div>
+        <strong>Chest:</strong> @Model.Chest
+    </div>
+    <div>
+        <strong>Waist:</strong> @Model.Waist
+    </div>
+    <div>
+        <strong>Hips:</strong> @Model.Hips
+    </div>
+    <div>
+        <strong>Inseam:</strong> @Model.Inseam
+    </div>
+</div>
+
+<form method="post">
+    <input type="submit" value="Delete" class="btn btn-danger" />
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

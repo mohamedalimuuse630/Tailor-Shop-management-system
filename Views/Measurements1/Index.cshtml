@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Tailor_shop.ViewModel.MeasurementViewModel>
+@{
+    Layout = "AdminLayout";
+}
+
+@{
+    ViewData["Title"] = "Measurements List";
+}
+
+<h1>Measurements List</h1>
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Measurement</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Measurement ID</th>
+            <th>Customer</th>
+            <th>Product</th>
+            <th>Neck</th>
+            <th>Chest</th>
+            <th>Waist</th>
+            <th>Hips</th>
+            <th>Inseam</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var measurement in Model)
+        {
+            <tr>
+                <td>@measurement.MeasurementId</td>
+                <td>@measurement.CustomerId</td>
+                <td>@measurement.ProductId</td>
+                <td>@measurement.Neck</td>
+                <td>@measurement.Chest</td>
+                <td>@measurement.Waist</td>
+                <td>@measurement.Hips</td>
+                <td>@measurement.Inseam</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@measurement.MeasurementId" class="btn btn-warning">Edit</a>
+                    <a asp-action="Details" asp-route-id="@measurement.MeasurementId" class="btn btn-info">Details</a>
+                    <a asp-action="Delete" asp-route-id="@measurement.MeasurementId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

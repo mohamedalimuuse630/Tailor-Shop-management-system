@@ -1,0 +1,42 @@
+﻿@model Tailor_shop.ViewModel.MeasurementViewModel
+@{
+    Layout = "AdminLayout";
+}
+
+@{
+    ViewData["Title"] = "Measurement Details";
+}
+
+<h1>Measurement Details</h1>
+
+<div>
+    <h3>Measurement Information</h3>
+    <div>
+        <strong>Measurement ID:</strong> @Model.MeasurementId
+    </div>
+    <div>
+        <strong>Customer:</strong> @Model.CustomerId
+    </div>
+    <div>
+        <strong>Product:</strong> @Model.ProductId
+    </div>
+    <div>
+        <strong>Neck:</strong> @Model.Neck
+    </div>
+    <div>
+        <strong>Chest:</strong> @Model.Chest
+    </div>
+    <div>
+        <strong>Waist:</strong> @Model.Waist
+    </div>
+    <div>
+        <strong>Hips:</strong> @Model.Hips
+    </div>
+    <div>
+        <strong>Inseam:</strong> @Model.Inseam
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

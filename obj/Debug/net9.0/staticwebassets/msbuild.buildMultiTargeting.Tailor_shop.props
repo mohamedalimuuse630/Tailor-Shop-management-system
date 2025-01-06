@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Tailor_shop.props" />
+</Project>
